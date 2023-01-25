@@ -1,0 +1,12 @@
+extends base.pug
+
+block styles
+    style
+        include ../static/css/base.css
+        include ../static/css/resume.css
+
+block content
+    div.container
+        iframe(src="../static/resume.pdf")
+    a(href='../static/resume.jpg' download ="resume",class ="pdf_download") Download Resume
+        

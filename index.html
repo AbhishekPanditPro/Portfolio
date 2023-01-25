@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display2</title>
+   
+    <style>
+        /* css position : static(default), absolute, realtive, fixed, sticky */
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: aquamarine;
+            border: 2px solid black;
+        }
+        .box{
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            margin: 2px;
+        }
+        #box1{
+            /* background-color: white; */
+        }
+        #box3{
+            /* realtive to its normal position and will leave a gap to its normal postion */
+            /* position: relative; */
+
+            /* absolute : relative to the position of its first parent  */
+            /* position: absolute; */
+
+
+            /* fixed: 
+            
+            */
+            top: 34px;
+            left: 34px;
+            /* z-index: -1 ; */
+            background-color: blueviolet;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+</html>

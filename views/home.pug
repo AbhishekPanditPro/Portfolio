@@ -1,0 +1,42 @@
+html 
+    head 
+        title Home 
+        style 
+            include ../static/css/base.css
+            include ../static/css/home.css
+    body
+        div.main
+            nav.navbar 
+                ul 
+                    li #[a(href='/') Home]
+                    li #[a(href='/about') About ]
+                    li #[a(href='/resume') Resume ]
+            div.container
+                div.contactLink
+                        ul
+                            li 
+                                a(href = 'https://www.facebook.com/abu.abhishek100/', target = "_blank")
+                                    img(src="../static/icon/facebook.png", alt="")
+                            li 
+                                a(href = 'https://www.instagram.com/ab.hishekpandit/' , target = "_blank")
+                                    img(src="../static/icon/instagram.png", alt="")
+                            li 
+                                a(href = 'https://www.linkedin.com/in/abhishek-pandit-8a797b20a/', target = "_blank")
+                                    img(src="../static/icon/linkedin.png", alt="")
+                            li 
+                                a(href = 'https://github.com/AbhishekPanditPro', target = "_blank")
+                                    img(src="../static/icon/github.png", alt="")
+                div.textContent
+                    h3.text1
+                        | Hi, I am
+                    h2.text2 
+                        | Abhishek Pandit 
+                    h5.text3
+                        | I am always down for the soccer and an intresting fact about me is I dont get tired easily😜.
+                    
+                div.imageContent
+                    img(src="../static/img/portfolio_image.jpeg", alt="")
+
+                
+
+        

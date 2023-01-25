@@ -1,0 +1,59 @@
+/* .container{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(138, 245, 239);
+    width: 100%;
+    height:100%;
+    align-items: center;
+}
+ */
+ :root{
+    --gradient: linear-gradient(
+        45deg,
+        #dfd8ea,
+        #d2edd0,
+        #c2e9e4,
+        #ffffff,
+        #e5dbc7,
+        #e5e5bd
+    );
+    --gradient2: linear-gradient(
+        70deg,
+        #5e11d8,
+        #880661,
+        #670119,
+        #782b0f,
+        #6e5016,
+        #50500b
+        
+    );
+
+    --clr-neon: rgb(62, 6, 86);
+    --clr-bg: rgb(255, 255, 255);
+}
+ .main{
+    height: 100%;
+    width: 100%;
+     background-image: var(--gradient);
+    background-size: 400%;
+    animation: nav-animation 10s infinite alternate;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height:90%;
+    align-items: center;
+    border: 2px solid red;
+    
+    /* background-color: transparent; */
+    background-color: red;
+}
+
+
+
+.myAcademics{
+    display: block;
+    
+}

@@ -1,0 +1,127 @@
+
+:root{
+    --gradient: linear-gradient(
+        45deg,
+        #dfd8ea,
+        #d2edd0,
+        #c2e9e4,
+        #dfb6a5,
+        #e5dbc7,
+        #e5e5bd
+    );
+    --gradient2: linear-gradient(
+        70deg,
+        #5e11d8,
+        #880661,
+        #670119,
+        #782b0f,
+        #6e5016,
+        #50500b
+        
+    );
+
+    --clr-neon: rgb(255, 145, 0);
+    --clr-neon2: rgb(255, 255, 255);
+    --clr-bg: hsl(323 21% 16%);
+}
+*{
+    margin: 0;;
+}
+.main{
+    background-color: rgb(242, 255, 0);
+    background-image: var(--gradient);
+    background-size: 400%;
+    animation: nav-animation 5s infinite alternate;
+    justify-content: center ;
+    text-align: center;
+
+}
+@keyframes nav-animation {
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+.container{
+    display: block;
+    /* background-color: darksalmon; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: 75%;
+    height: 80%;
+    border-radius: 20px;
+}
+
+.container iframe{
+    width:100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+
+}
+
+
+
+
+.pdf_download{
+    top: 1em;
+    font-family: 'Secular One';
+    text-decoration: none;
+
+    color: var(--clr-neon2);
+    border: var(--clr-neon2) 0.125em solid;
+    width: 7em;
+    padding: 0.4em;
+    border-radius: 0.5em ;
+    text-shadow: 0 0 0.225em hsl(0 0% 100% / 0.5),
+    0 0 0.25em currentColor ;
+    box-shadow: inset 0 0 1em 0 var(--clr-neon2), 0 0 1em 0 var(--clr-neon2);
+    position: relative;
+    transition: background-color 1s linear;
+}
+
+.pdf_download::before{
+    content: "";
+    position: absolute;
+    background: var(--clr-neon2);
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    
+    transform: perspective(2em) rotateX(40deg) scale(1,0.65);
+    filter: blur(1em);
+    opacity: 0.7em;
+    pointer-events: none;
+}
+.pdf_download::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 2em .5em var(--clr-neon2);
+    opacity: 0;
+    transition: opacity 1s linear ;
+
+}
+
+.pdf_download:hover,
+.pdf_download:focus{
+    background: var(--clr-neon2);
+    color: var(--clr-bg);
+    text-shadow: none;
+
+}
+
+.pdf_download:hover::after{
+    opacity: 1;
+}
